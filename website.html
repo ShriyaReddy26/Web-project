@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Swiggy-Style Layout</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Reset & Basic Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+}
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.navbar-center {
+  flex: 1;
+  margin: 0 20px;
+  text-decoration: none;
+ 
+  
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  text-decoration: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  
+}
+
+.nav-links li a:hover{
+  color: orangered;
+  text-decoration: none;
+}
+
+.Other {
+  margin-right: 400px;
+
+}
+
+.navbar-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+ 
+}
+
+/* Categories Section */
+.categories {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 4px;
+}
+
+.categories h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.category-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap; 
+  margin-left: 0px;
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  /* width: 150px; 
+  height: 150px; */
+}
+
+.category-item img {
+  width: 250px;
+  height: 150px;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.category-item p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Restaurant Chains Section */
+.restaurant-chains {
+  background-color: #fff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 4px;
+}
+
+.restaurant-chains h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.chain-list {
+  display: flex;
+  /* justify-content: center; */
+  gap: 20px;
+  /* flex-wrap: wrap; */
+  grid-auto-columns: auto;
+
+}
+
+.chain-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align:justify;
+  
+}
+
+.chain-item img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.chain-item p {
+  font-size: 1rem;
+  font-weight: 500;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+h2 {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+}
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+.button-grid button {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.button-grid button:hover {
+    background-color: #f0f0f0;
+}
+.show-more {
+    color: #ff6f00;
+    font-weight: bold;
+    cursor: pointer;
+}
+.search-bar {
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.filters button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.filters button:hover {
+background-color: #f0f0f0;
+}
+
+ /* Reset some default styles */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+    .footer {
+      background-color: #f8f8f8;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #333;
+    }
+    .footer-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .footer-section {
+      flex: 1 1 200px;
+      margin: 10px;
+    }
+    .footer-section h4 {
+      margin-bottom: 15px;
+      font-size: 16px;
+      color: #000;
+    }
+    .footer-section ul {
+      list-style: none;
+    }
+    .footer-section ul li {
+      margin-bottom: 10px;
+    }
+    .footer-section ul li a {
+      text-decoration: none;
+      color: #333;
+      transition: color 0.3s;
+    }
+    .footer-section ul li a:hover {
+      text-decoration: underline;
+      color: #000;
+    }
+    .footer-bottom {
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+      padding-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13px;
+    }
+    .footer-bottom .social-links a {
+      margin-right: 10px;
+      text-decoration: none;
+      color: #333;
+    }
+    .footer-bottom .social-links a:hover {
+      text-decoration: underline;
+    }
+    .app-download {
+      margin: 10px 0;
+    }
+    @media (max-width: 768px) {
+      .footer-container,
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+      }
+      .footer-bottom .social-links {
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header class="navbar">
+    <div class="navbar-left">
+      <img src="data:image/png;base64,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" alt="Logo" class="logo">
+      <select class="Other">
+        <option>Other</option>
+        <option>Get current location</option>
+      </select>
+    </div>
+    <nav class="navbar-center">
+      <ul class="nav-links">
+        <li><a href="#">Swiggy Corporate</a></li>
+        <li><a href="#">Search</a ></li>
+        <!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+        <li><a href="#">Offers</a></li>
+        <!-- <i class="fa-solid fa-percent"></i> -->
+        <li><a href="#">Help</a></li>
+        <li> <a href="#" class="signin">Sign In</a></li>
+          <li><a href="#" class="cart">Cart</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Categories Section -->
+    <section class="categories">
+      <h2>What's on your mind?</h2>
+      <div class="category-list">
+        <!-- Replace the image sources with your own images -->
+        <div class="category-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Biryani.png" alt="biryani">
+          <p>Biryani</p>
+        </div>
+        <div class="category-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_cake.png" alt="Cakes">
+          <p>Cakes</p>
+        </div>
+        <div class="category-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Noodles.png" alt="Noodles">
+          <p>Noodles</p>
+        </div>
+        <div class="category-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/8f508de7-e0ac-4ba8-b54d-def9db98959e_chole%20bhature.png" alt="Chole Bhature">
+          <p>Chole Bhature</p>
+        </div>
+        <div class="category-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Gulab%20jamun.png" alt="Gulab Jamun">
+          <p>Gulab Jamun</p>
+        </div>
+        <div class="category-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_288,h_360/MERCHANDISING_BANNERS/IMAGES/MERCH/2024/7/2/6ef07bda-b707-48ea-9b14-2594071593d1_Khichdi.png" alt="Khichdi">
+          <p>Khichdi</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Top Restaurant Chains Section -->
+    <section class="restaurant-chains">
+      <h2>Top restaurant chains in Chhindwara</h2>
+      <div class="chain-list">
+        <!-- Replace the image sources with your own images -->
+        <div class="chain-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/vkhcohhmqfczycw9vsar" alt="Chain 1">
+          <p>Hotel Sai Nath & Sai Restaurant</p>
+        </div>
+        <div class="chain-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/enj3srsnhbltbom2ovvh" alt="Chain 2">
+          <p>Dev International</p>
+        </div>
+        <div class="chain-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/mt2aggiscfl3yviatwng" alt="Chain 3">
+          <p>Backery World</p>
+        </div>
+        <div class="chain-item">
+          <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/1/17/a38d20d7-bbb7-4b67-8bdd-7740e85cd4af_385824.JPG" alt="Chain 4">
+          <p>The Belgian Waffle Co.</p>
+        </div>        
+      </div>
+      <div class="container">
+        <div class="filters">
+            <button>Filter</button>
+            <button>Sort By</button>
+            <button>New on Swiggy</button>
+            <button>Ratings 4.0+</button>
+            <button>Pure Veg</button>
+            <button>Offers</button>
+            <button>Rs. 300 - Rs. 600</button>
+            <button>Less than Rs. 300</button>
+        </div>
+
+        <input type="text" class="search-bar" placeholder="Search for restaurant and food">
+
+        <h2>Best Places to Eat Across Cities</h2>
+        <div class="button-grid">
+            <button>Best Restaurants in Bangalore</button>
+            <button>Best Restaurants in Pune</button>
+            <button>Best Restaurants in Mumbai</button>
+            <button>Best Restaurants in Delhi</button>
+            <button>Best Restaurants in Hyderabad</button>
+            <button>Best Restaurants in Kolkata</button>
+            <button>Best Restaurants in Chennai</button>
+            <button>Best Restaurants in Chandigarh</button>
+            <button>Best Restaurants in Ahmedabad</button>
+            <button>Best Restaurants in Jaipur</button>
+            <button>Best Restaurants in Nagpur</button>
+            <div class="show-more">Show More</div>
+        </div>
+
+        <h2>Best Cuisines Near Me</h2>
+        <div class="button-grid">
+            <button>Chinese Restaurant Near Me</button>
+            <button>South Indian Restaurant Near Me</button>
+            <button>Indian Restaurant Near Me</button>
+            <button>Kerala Restaurant Near Me</button>
+            <button>Korean Restaurant Near Me</button>
+            <button>North Indian Restaurant Near Me</button>
+            <button>Seafood Restaurant Near Me</button>
+            <button>Bengali Restaurant Near Me</button>
+            <button>Punjabi Restaurant Near Me</button>
+            <button>Italian Restaurant Near Me</button>
+            <button>Andhra Restaurant Near Me</button>
+            <div class="show-more">Show More</div>
+        </div>
+    </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer Section -->
+  <footer class="footer">
+    <div class="footer-container">
+      <!-- Company -->
+      <div class="footer-section">
+        <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Group.svg" alt="Swiggy">
+        <p>© 2025 Swiggy Limited</p>
+        </div>
+        <div class="footer-section">
+          <!-- about us -->
+        <h4>Company</h4><br>
+        <ul>
+          <li><a href="#"></a>About Us</a></li><br>
+          <li><a href="#"></a>Swiggy Corporate</a></li><br>
+          <li><a href="#"></a>Careers</a></li><br>
+          <li><a href="#"></a>Team</a></li><br>
+          <li><a href="#"></a>Swiggy One</a></li><br>
+          <li><a href="#"></a>Swiggy</a></li>
+          <li><a href="#"></a>instamart</a></li><br>
+          <li><a href="#"></a>Swiggy</a></li>
+          <li><a href="#"></a>Dineout</li><br>
+          <li><a href="#"></a>Swiggy Genie</a></li<br>
+        </ul>
+      </div>
+      <!-- Support -->
+      <div class="footer-section">
+        <h4>Contact us</h4><br>
+        <ul>
+          <li><a href="#"></a>Help & Support</a></li><br>
+          <li><a href="#"></a>Partner with Us</a></li><br>
+          <li><a href="#"></a>Ride with Us</a></li><br><br>
+        <h4>Legal</h4>
+          <li>Terms &</li>
+          <li>conditions</li></a><br>
+          <li>Cookie Policy</li></a><br>
+          <li>Privacy Policy</li></a><br>
+        </ul>
+      </div>
+      <!-- Availability -->
+      <div class="footer-section">
+        <h4>Available in:</h4>
+        <ul>
+          <li><a href="#">Bangalore</a></li>
+          <li><a href="#">Gurgaon</a></li>
+          <li><a href="#">Hyderabad</a></li>
+          <li><a href="#">Delhi</a></li>
+          <li><a href="#">Mumbai</a></li>
+          <li><a href="#">Pune</a></li>
+          <label for="685 contries">685 countries</label>
+          <select name="685 countries" id="685 countries"></select>
+        </ul>
+      </div>
+      <!-- Life at Swiggy -->
+      <div class="footer-section">
+        <h4>Life at Swiggy</h4>
+        <ul>
+          <li><a href="#">Explore with Swiggy</a></li>
+          <li><a href="#">Swiggy News</a></li>
+          <li><a href="#">Snackables</a></li>
+        </ul>
+        <div class="footer-section">
+          <!-- social links -->
+          <div class="social-links">
+            <h4>Social Links</h4>
+          <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Linkedin.svg" alt="">
+          <img src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-instagram.svg" alt="">
+          <img src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-facebook.svg" alt="">
+          <img src="https://media-assets.swiggy.com/portal/testing/seo-home/icon-pinterest.svg" alt="">
+          <img src="https://media-assets.swiggy.com/portal/testing/seo-home/Twitter.svg" alt="">
+        </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <!-- downloading -->
+        <p><h2>For better experience, download the swiggy app now</h2></p>
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-AppStore_lg30tv" alt="">
+        <img src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_200,h_65/icon-GooglePlay_1_zixjxl" alt="">
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
+
+
